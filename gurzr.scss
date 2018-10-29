@@ -1,0 +1,33 @@
+
+// Define variables to override default ones
+$primary-color: #2e5bea;
+$dark-color: #3e396b;
+
+$base-font-family: "Work Sans";
+
+// Import what we want from spectre
+// see https://github.com/picturepan2/spectre/blob/master/src/spectre.scss
+@import "node_modules/spectre.css/src/variables";
+
+@import "node_modules/spectre.css/src/mixins";
+
+// Reset and dependencies
+@import "node_modules/spectre.css/src/normalize";
+@import "node_modules/spectre.css/src/base";
+
+// Elements
+@import "node_modules/spectre.css/src/typography";
+@import "node_modules/spectre.css/src/labels";
+@import "node_modules/spectre.css/src/media";
+
+// Layout
+@import "node_modules/spectre.css/src/layout";
+@import "node_modules/spectre.css/src/navbar";
+
+// Components
+@import "node_modules/spectre.css/src/menus";
+@import "node_modules/spectre.css/src/pagination";
+
+// Utility classes
+@import "node_modules/spectre.css/src/animations";
+@import "node_modules/spectre.css/src/utilities";
