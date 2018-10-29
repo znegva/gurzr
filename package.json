@@ -1,0 +1,28 @@
+{
+  "name": "gurzr",
+  "version": "0.0.1",
+  "description": "A Bolt CMS theme",
+  "dependencies": {
+    "spectre.css": "^0.5.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "sass_watch": "sass --watch gurzr.scss:css/gurzr.css",
+    "sass_once": "sass gurzr.scss css/gurzr.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/znegva/gurzr.git"
+  },
+  "keywords": [
+    "theme",
+    "Bolt",
+    "CMS"
+  ],
+  "author": "Martin Kausche",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/znegva/gurzr/issues"
+  },
+  "homepage": "https://github.com/znegva/gurzr#readme"
+}
