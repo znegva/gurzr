@@ -1,0 +1,27 @@
+{% set link = pager.makelink() %}
+
+{% if pager.totalpages > 1 %}
+    <div class="pagination">
+        {# 'prev' #}
+        {% if pager.current > 1 and class != "narrow" %}
+            <a href="{{link}}{{pager.current-1}}" rel="noindex, follow" class="pagination-item">
+                Newer
+            </a>
+        {% else %}
+            <span class="pagination-item">
+                Newer
+            </span>
+        {% endif %}
+
+        {# 'next' #}
+        {% if pager.current < pager.totalpages and class != "narrow" %}
+            <a href="{{link}}{{pager.current+1}}" rel="noindex, follow" class="pagination-item">
+                Older
+            </a>
+        {% else %}
+            <span class="pagination-item">
+                Older
+            </span>
+        {% endif %}
+    </div>
+{% endif %}

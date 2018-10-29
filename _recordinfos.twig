@@ -1,0 +1,34 @@
+{# This file is inserted as the 'info' of each listed record and inside the record #}
+
+{# show publishing date for certain contenttypes
+   can be defined in theme.yml #}
+{% if record.contenttype.show_publish_date %}
+    {{ record.datepublish|localedatetime("%d.%m.%Y") }}
+{% endif %}
+
+{% if record.taxonomy is defined %}
+    {% for type, values in record.taxonomy %}
+        {% if type in record.contenttype.shown_taxonomy %}
+            {% set prefix = type == "tags"
+                ? '#'
+                : type == "categories"
+                    ? '@'
+                    : '' %}
+            {% for link, value in values %}
+                <a href="{{ link }}">
+                    {{ prefix }}{{ value }}
+                </a>
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+
+{% if record.use_password_protection %}
+    <i class="fa fa-lock"></i>
+{% endif %}
+
+{% if extended | default() %}
+    -
+    <a href="{{ record.link() }}">{{ __('general.phrase.permalink') }}</a>
+    -
+{% endif %}

@@ -1,0 +1,87 @@
+{% extends '_master.twig' %}
+
+{% block content %}
+
+    {# If used for listing a taxonomy, we add a heading.: #}
+    {% if taxonomytype is defined %}
+        <h1>
+            {{ __('general.phrase.overview-for') }}
+            {% if taxonomy.options[slug]is defined %}
+                {{ taxonomy.options[slug] }}
+            {% else %}
+                {{ slug }}
+            {% endif %}
+        </h1>
+        <hr>
+        {# Taxonomies are fetched unordered by design except if 'has_sortorder'
+       is set to true. This way we keep 'grouping' intact in the listing. #}
+        {% if not taxonomy.has_sortorder %}
+            {# If we specified an order in config.yml, sort them here, accordingly: #}
+            {% set records = records | order(config.get('general/listing_sort')) %}
+        {% endif %}
+    {% endif %}
+
+    {# if used for searches #}
+    {% if search is defined %}
+        <form method="get" action="{{ path('search') }}" id="searchform-inline" enctype="text/plain">
+            <input type="search" value="{{ search|default() }}" placeholder="{{ __('general.phrase.search-ellipsis') }}" name="search">
+            <button type="submit" class="button">{{ __('general.phrase.search') }}
+            </button>
+        </form>
+        <hr>
+
+    {% endif %}
+
+    {# BEGIN normal listing stuff #}
+
+    {% for record in records %}
+        {% if not record.contenttype.hide_in_listings %}
+        {# dont show anything if the contenttype has defined hide_in_listings = true #}
+        <div class="post">
+            <h1 class="post-title">
+                <a href="{{ record.link }}">
+                    {{ record.title }}
+                </a>
+            </h1>
+
+            {% block recordinfos %}
+                <span class="post-date">
+                    {% include('_recordinfos.twig') %}
+                </span>
+            {% endblock recordinfos %}
+
+            <p class="post-teaser">
+                <a href="{{ record.link }}" class="readmore">
+                    {% if record.image %}
+                        <img src="{{ thumbnail(record.image, 'wide_500w') }}"
+                        srcset="{{ thumbnail(record.image, 'wide_500w') }} 500w,
+                        {{ thumbnail(record.image, 'wide_720w') }} 720w">
+                    {% elseif record.introduction %}
+                        {{ record.introduction }}
+                    {% elseif record.teaser and record.teaser != "" %}
+                        {{ record.teaser }}
+                    {% else %}
+                        <span>
+                            {{ record.excerpt(250, false, search|default('')) }}
+                        </span>
+                    {% endif %}
+                </a>
+            </p>
+        </div>
+        {% endif %}
+
+    {% else %}
+        <div class="post">
+            <h1 class="post-title">
+                {{ __('general.phrase.no-content-found') }}
+            </h1>
+            <p>
+                {{ __("Unfortunately, no content could be found. Try another page, or go to the <a href=\"%paths_root%\">homepage</a>.", {'%paths_root%': path('homepage')} ) }}
+            </p>
+        </div>
+    {% endfor %}
+
+    {# If there are more records than will fit on one page, the pager is shown. #}
+    {{ pager(template = '_pager.twig') }}
+
+{% endblock content %}

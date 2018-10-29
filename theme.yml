@@ -1,0 +1,41 @@
+# Optional config file for the theme.
+
+# Variables that are in this file, can be used in your twig template like {{ theme.foo }}
+
+# Template filenames. If you 're creating a theme for distribution, you can specify
+# the filenames of the templates here. The templates you will set in this config
+# file will override the ones in the global app/config/config.yml, so beware!
+# maintenance_template:    maintenance_default.twig
+# homepage_template:       index.twig
+# record_template:         record.twig
+# listing_template:        listing.twig
+# search_results_template: search.twig
+# notfound:                notfound.twig
+
+
+# theme for highlingthing code blocks, see https://highlightjs.org/static/demo/
+# for previews of all supported themes
+highlight_theme:           'dracula'
+
+
+# Aliases can be set to restrict images to a specific set of available
+# resolutions or to decouple image sizes from template files.
+thumbnails:
+    aliases:
+        wide_720w:
+            size:           [720, 200]
+            cropping:       crop
+            allow_upscale:  true
+        wide_500w:
+            size:           [500, 140]
+            cropping:       crop
+            allow_upscale:  true
+        scale_720w:
+            size:          [720,0]
+            allow_upscale: false
+        scale_500w:
+            size:          [500,0]
+            allow_upscale: false
+        scale_250h:
+            size:          [0,250]
+            allow_upscale: false

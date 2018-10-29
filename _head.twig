@@ -1,0 +1,93 @@
+<head>
+    <link href="http://gmpg.org/xfn/11" rel="profile">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+    <!-- Enable responsiveness on mobile devices-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+    <!-- title and description -->
+    {% set title = ''%}
+    {% if record.title is defined %}
+        {% set title = title ~ record.title|striptags %}
+    {% else %}
+        {% if taxonomytype is defined %}
+            {% set title = title ~  __('general.phrase.overview-for') ~ ' ' ~ slug %}
+        {% elseif contenttype is defined %}
+            {% set title = title ~ title ~ __('general.phrase.overview-for') ~ ' ' ~ contenttype %}
+        {% elseif search is defined %}
+            {% set title = title ~ __('general.phrase.search-for-ellipsis') ~ ' ' ~ search|default() %}
+        {% endif %}
+    {% endif %}
+    {% if title %}
+        {% set title = title ~ ' | ' %}
+    {% endif %}
+    {% set title = title ~ app.config.get('general/sitename') %}
+
+    {% if record.teaser is defined %}
+        {% set description = record.teaser | striptags %}
+    {% elseif record.content is defined %}
+        {% set description = record.content|excerpt(200) %}
+    {% elseif record.body is defined %}
+        {% set description = record.body|excerpt(200) %}
+    {% elseif app.config.get('general/payoff') %}
+        {% set description = app.config.get('general/payoff')|striptags %}
+    {% else %}
+        {% set description = "" %}
+    {% endif %}
+
+    <title>
+        {{ title }}
+    </title>
+    <meta name="description" content="{{ description }}">
+
+    <!-- Icons -->
+    {% if file_exists('files/favicon.png') %}
+        <link rel="icon" type="image/png" href="{{ asset('favicon.png', 'files') }}" sizes="32x32">
+        <link rel="apple-touch-icon" type="image/png" href="{{ asset('favicon.png', 'files') }}">
+    {% else %}
+        <link rel="icon" type="image/png" href="{{ asset('images/favicon.png', 'theme') }}" sizes="32x32">
+        <link rel="apple-touch-icon" type="image/png" href="{{ asset('images/favicon.png', 'files') }}">
+    {% endif %}
+
+    <!-- CEO -->
+    {% set keywords = record.title %}
+    {% for c in record.taxonomy.categories %}
+        {% set keywords = keywords ~ ', ' ~ c %}
+    {% endfor %}
+    {% for c in record.taxonomy.tags %}
+        {% set keywords = keywords ~ ', ' ~ c %}
+    {% endfor %}
+    <meta name="keywords" content="{{ keywords }}">
+
+    <meta property="og:site_name" content="{{ app.config.get('general/sitename') }}">
+    <meta property="og:title" content="{{ title }}">
+    <meta property="og:description" content="{{ description }}">
+    {% if image(record.image) %}
+        <meta property="og:image" content="{{ paths.hosturl ~ record.image|image(400,0,'r') }}">
+    {% endif %}
+    <meta property="og:url" content="{{ paths.currenturl }}">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{{ asset('css/gurzr.css', 'theme') }}">
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+
+    <!-- highlight.js -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/{{ theme.highlight_theme }}.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script>
+        hljs.initHighlightingOnLoad();
+    </script>
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+
+    <!-- custom CSS -->
+    {% if file_exists('files/custom.css') %}
+        <link rel="stylesheet" type="text/css" href="{{ asset('custom.css', 'files') }}">
+    {% endif %}
+
+    <!-- RSS -->
+    <!--link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml"-->
+</head>

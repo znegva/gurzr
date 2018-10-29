@@ -1,0 +1,80 @@
+{% extends '_master.twig' %}
+
+{% block content %}
+    {# the first thing is to check if this record shall be password protected #}
+    {% if record.use_password_protection %}
+        {% if app.extensions.get('Bobdenotter/PasswordProtect') is not null %}
+            {{ include(template_from_string("{{ passwordprotect() }}")) }}
+        {% else %}
+            <p class="warning">
+              Warning: This theme suggests you install the 'Bobdenotter/PasswordProtect' extension.
+              Otherwise the password protection will not work!
+            </p>
+        {% endif %}
+    {% endif %}
+    <div class="post">
+        <h1 class="post-title">
+            {{ record.title }}
+        </h1>
+        {% block recordinfos %}
+            <span class="post-date">
+                {% include('_recordinfos.twig') %}
+            </span>
+        {% endblock recordinfos %}
+
+        {% block recordcontent %}
+            {% if record.show_image_above_body and record.image %}
+                <img src="{{ record.image|thumbnail('scale_720w') }}"
+                srcset="{{ record.image|thumbnail('scale_500w') }} 500w,
+                {{ record.image|thumbnail('scale_720w') }} 720w">
+            {% endif %}
+            {% if record.body %}
+                {{ record.body }}
+            {% elseif record.content %}
+                {{ record.content }}
+            {% endif %}
+
+            {% if record.gpx %}
+                {% include('_gpx.twig') %}
+            {% endif %}
+
+            {% if record.gallery %}
+                {% include('_gallery.twig') %}
+            {% endif %}
+
+            {% if record.copyright and record.copyright != "" %}
+                <dl class="copyright">
+                    <dt>
+                        <i class="fa fa-copyright"></i>
+                    </dt>
+                    <dd>
+                        {{ record.copyright|markdown }}
+                    </dd>
+                </dl>
+            {% endif %}
+
+            {% block othercontent %}
+            {% endblock %}
+        {% endblock recordcontent %}
+    </div>
+
+    {% set relatedrecords = record.related() %}
+    {% if relatedrecords is not empty %}
+        <div class="related">
+            <h2>{{ __('general.phrase.related-content') }}</h2>
+            <ul class="related-posts">
+                {% for related in relatedrecords %}
+                    <li>
+                        <h3>
+                            <a href="{{ related.link }}">
+                                {{ related.title }}
+                                <small>{{ related.datepublish|localedatetime("%d.%m.%Y") }}</small>
+                            </a>
+                        </h3>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    {% endif %}
+
+{% endblock content %}
