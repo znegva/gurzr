@@ -1,6 +1,6 @@
 
 // Define variables to override default ones
-$primary-color: #2e5bea;
+$primary-color: #454d5d;
 $dark-color: #3e396b;
 
 $base-font-family: "Work Sans";
@@ -17,6 +17,7 @@ $base-font-family: "Work Sans";
 
 // Elements
 @import "node_modules/spectre.css/src/typography";
+@import "node_modules/spectre.css/src/buttons";
 @import "node_modules/spectre.css/src/labels";
 @import "node_modules/spectre.css/src/media";
 
