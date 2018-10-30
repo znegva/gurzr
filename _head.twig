@@ -83,6 +83,13 @@
     <!-- font awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
 
+    <!-- imagelightbox -->
+    {% if record.gallery %}
+        <link rel="stylesheet" href="{{ asset('js/photoswipe/photoswipe.css', 'theme') }}"/>
+        <link rel="stylesheet" href="{{ asset('js/photoswipe/default-skin/default-skin.css', 'theme') }}"/>
+        <script language="javascript" type="text/javascript" src="{{ asset('js/photoswipe/photoswipe.min.js', 'theme') }}"></script>
+        <script language="javascript" type="text/javascript" src="{{ asset('js/photoswipe/photoswipe-ui-default.min.js', 'theme') }}"></script>
+    {% endif %}
     <!-- custom CSS -->
     {% if file_exists('files/custom.css') %}
         <link rel="stylesheet" type="text/css" href="{{ asset('custom.css', 'files') }}">

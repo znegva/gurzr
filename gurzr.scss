@@ -32,3 +32,58 @@ $base-font-family: "Work Sans";
 // Utility classes
 @import "node_modules/spectre.css/src/animations";
 @import "node_modules/spectre.css/src/utilities";
+
+
+
+/* gallery thumbnails */
+
+.thumbs {
+	display: flex;
+	overflow: hidden;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+  a {
+  	position: relative;
+  	display: block;
+  	height: 150px;
+  	margin-right: 5px;
+  	margin-bottom: 5px;
+  	flex-grow: 1;
+
+  	overflow: hidden;
+
+    img {
+    	height: 150px;
+    	max-width: 100%;
+    	min-width: 100%;
+    	vertical-align: bottom;
+    	object-fit: cover;
+
+    	-webkit-transition: all 0.25s ease;
+        -moz-transition: all 0.25s ease;
+        -o-transition: all 0.25s ease;
+        -ms-transition: all 0.25s ease;
+        transition: all 0.25s ease;
+
+    	/* prevent blurry scaling */
+    	-webkit-backface-visibility: hidden;
+        -ms-transform: translateZ(0); /* IE 9 */
+        -webkit-transform: translateZ(0); /* Chrome, Safari, Opera */
+        transform: translateZ(0);
+    }
+    img:hover {
+        -webkit-transform:scale(1.024); /* Safari and Chrome */
+        -moz-transform:scale(1.024); /* Firefox */
+        -ms-transform:scale(1.024); /* IE 9 */
+        -o-transform:scale(1.024); /* Opera */
+         transform:scale(1.024);
+    }
+  }
+  &:after {
+  	content: '';
+  	flex-grow: 999999999;
+  	min-width: 250px;
+  	height: 0;
+  }
+}
