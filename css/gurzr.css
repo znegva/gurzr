@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Vollkorn");
 /* Manually forked from Normalize.css */
 /* normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */
 /**
@@ -397,23 +398,23 @@ html {
 
 body {
   background: #fff;
-  color: #48427c;
-  font-family: "Work Sans", "Helvetica Neue", sans-serif;
+  color: #1e1e1e;
+  font-family: "Vollkorn", "Helvetica Neue", sans-serif;
   font-size: 0.8rem;
   overflow-x: hidden;
   text-rendering: optimizeLegibility; }
 
 a {
-  color: #454d5d;
+  color: #222;
   outline: none;
   text-decoration: none; }
   a:focus {
-    box-shadow: 0 0 0 0.1rem rgba(69, 77, 93, 0.2); }
+    box-shadow: 0 0 0 0.1rem rgba(34, 34, 34, 0.2); }
   a:focus, a:hover, a:active, a.active {
-    color: #2f3540;
+    color: #090909;
     text-decoration: underline; }
   a:visited {
-    color: #5b657a; }
+    color: #3c3c3c; }
 
 h1,
 h2,
@@ -476,18 +477,18 @@ kbd {
   border-radius: 0.1rem;
   line-height: 1.2;
   padding: .1rem .2rem;
-  background: #3e396b;
+  background: #111;
   color: #fff;
   font-size: 0.7rem; }
 
 mark {
   background: #ffe9b3;
-  color: #48427c;
+  color: #1e1e1e;
   border-radius: 0.1rem;
   padding: .05rem; }
 
 blockquote {
-  border-left: 0.1rem solid #e6e5f1;
+  border-left: 0.1rem solid #aaaaaa;
   margin-left: 0;
   padding: 0.4rem 0.8rem; }
   blockquote p:last-child {
@@ -525,9 +526,9 @@ dl dd {
   transition: all .2s ease;
   appearance: none;
   background: #fff;
-  border: 0.05rem solid #454d5d;
+  border: 0.05rem solid #222;
   border-radius: 0.1rem;
-  color: #454d5d;
+  color: #222;
   cursor: pointer;
   display: inline-block;
   font-size: 0.8rem;
@@ -541,14 +542,14 @@ dl dd {
   vertical-align: middle;
   white-space: nowrap; }
   .btn:focus {
-    box-shadow: 0 0 0 0.1rem rgba(69, 77, 93, 0.2); }
+    box-shadow: 0 0 0 0.1rem rgba(34, 34, 34, 0.2); }
   .btn:focus, .btn:hover {
-    background: #a5adbc;
-    border-color: #3e4654;
+    background: #828282;
+    border-color: #1a1a1a;
     text-decoration: none; }
   .btn:active, .btn.active {
-    background: #3e4654;
-    border-color: #343a46;
+    background: #1a1a1a;
+    border-color: #0e0e0e;
     color: #fff;
     text-decoration: none; }
     .btn:active.loading::after, .btn.active.loading::after {
@@ -559,16 +560,16 @@ dl dd {
     opacity: .5;
     pointer-events: none; }
   .btn.btn-primary {
-    background: #454d5d;
-    border-color: #3e4654;
+    background: #222;
+    border-color: #1a1a1a;
     color: #fff; }
     .btn.btn-primary:focus, .btn.btn-primary:hover {
-      background: #3a414e;
-      border-color: #343a46;
+      background: #151515;
+      border-color: #0e0e0e;
       color: #fff; }
     .btn.btn-primary:active, .btn.btn-primary.active {
-      background: #363c49;
-      border-color: #2f3540;
+      background: #101010;
+      border-color: #090909;
       color: #fff; }
     .btn.btn-primary.loading::after {
       border-bottom-color: #fff;
@@ -610,9 +611,9 @@ dl dd {
   .btn.btn-link {
     background: transparent;
     border-color: transparent;
-    color: #454d5d; }
+    color: #222; }
     .btn.btn-link:focus, .btn.btn-link:hover, .btn.btn-link:active, .btn.btn-link.active {
-      color: #2f3540; }
+      color: #090909; }
   .btn.btn-sm {
     font-size: 0.7rem;
     height: 1.4rem;
@@ -675,19 +676,19 @@ dl dd {
   border-radius: 0.1rem;
   line-height: 1.2;
   padding: .1rem .2rem;
-  background: #f0eff6;
-  color: #514b8c;
+  background: #b2b2b2;
+  color: #2b2b2b;
   display: inline-block; }
   .label.label-rounded {
     border-radius: 5rem;
     padding-left: .4rem;
     padding-right: .4rem; }
   .label.label-primary {
-    background: #454d5d;
+    background: #222;
     color: #fff; }
   .label.label-secondary {
-    background: #a5adbc;
-    color: #454d5d; }
+    background: #828282;
+    color: #222; }
   .label.label-success {
     background: #32b643;
     color: #fff; }
@@ -746,7 +747,7 @@ video.video-responsive {
 .figure {
   margin: 0 0 0.4rem 0; }
   .figure .figure-caption {
-    color: #5b549d;
+    color: #373737;
     margin-top: 0.4rem; }
 
 .container {
@@ -1148,7 +1149,7 @@ video.video-responsive {
     text-decoration: none; }
 
 .menu {
-  box-shadow: 0 0.05rem 0.2rem rgba(62, 57, 107, 0.3);
+  box-shadow: 0 0.05rem 0.2rem rgba(17, 17, 17, 0.3);
   background: #fff;
   border-radius: 0.1rem;
   list-style: none;
@@ -1173,11 +1174,11 @@ video.video-responsive {
       padding: 0.2rem 0.4rem;
       text-decoration: none; }
       .menu .menu-item > a:focus, .menu .menu-item > a:hover {
-        background: #a5adbc;
-        color: #454d5d; }
+        background: #828282;
+        color: #222; }
       .menu .menu-item > a:active, .menu .menu-item > a.active {
-        background: #a5adbc;
-        color: #454d5d; }
+        background: #828282;
+        color: #222; }
     .menu .menu-item .form-checkbox,
     .menu .menu-item .form-radio,
     .menu .menu-item .form-switch {
@@ -1202,18 +1203,18 @@ video.video-responsive {
       padding: 0.2rem 0.2rem; }
     .pagination .page-item a {
       border-radius: 0.1rem;
-      color: #5b549d;
+      color: #373737;
       display: inline-block;
       padding: 0.2rem 0.4rem;
       text-decoration: none; }
       .pagination .page-item a:focus, .pagination .page-item a:hover {
-        color: #454d5d; }
+        color: #222; }
     .pagination .page-item.disabled a {
       cursor: default;
       opacity: .5;
       pointer-events: none; }
     .pagination .page-item.active a {
-      background: #454d5d;
+      background: #222;
       color: #fff; }
     .pagination .page-item.page-prev, .pagination .page-item.page-next {
       flex: 1 0 50%; }
@@ -1238,28 +1239,28 @@ video.video-responsive {
     opacity: 1;
     transform: translateY(0); } }
 .text-primary {
-  color: #454d5d; }
+  color: #222; }
 
 a.text-primary:focus, a.text-primary:hover {
-  color: #3a414e; }
+  color: #151515; }
 a.text-primary:visited {
-  color: #50596c; }
+  color: #2f2f2f; }
 
 .text-secondary {
-  color: #9ca5b6; }
+  color: #7a7a7a; }
 
 a.text-secondary:focus, a.text-secondary:hover {
-  color: #8e97ab; }
+  color: #6d6d6d; }
 a.text-secondary:visited {
-  color: #abb2c1; }
+  color: #878787; }
 
 .text-gray {
-  color: #a7a2ce; }
+  color: #777777; }
 
 a.text-gray:focus, a.text-gray:hover {
-  color: #9792c5; }
+  color: #6a6a6a; }
 a.text-gray:visited {
-  color: #b7b3d7; }
+  color: #848484; }
 
 .text-light {
   color: #fff; }
@@ -1270,12 +1271,12 @@ a.text-light:visited {
   color: white; }
 
 .text-dark {
-  color: #48427c; }
+  color: #1e1e1e; }
 
 a.text-dark:focus, a.text-dark:hover {
-  color: #3e396b; }
+  color: #111111; }
 a.text-dark:visited {
-  color: #514b8c; }
+  color: #2b2b2b; }
 
 .text-success {
   color: #32b643; }
@@ -1302,18 +1303,19 @@ a.text-error:visited {
   color: #ff6003; }
 
 .bg-primary {
-  background: #454d5d;
+  background: #222;
   color: #fff; }
 
 .bg-secondary {
-  background: #a5adbc; }
+  background: #828282;
+  color: #fff; }
 
 .bg-dark {
-  background: #3e396b;
+  background: #111;
   color: #fff; }
 
 .bg-gray {
-  background: #f9f9fc; }
+  background: #b9b9b9; }
 
 .bg-success {
   background: #32b643;
@@ -1395,7 +1397,7 @@ a.text-error:visited {
   .divider[data-content]::after,
   .divider-vert[data-content]::after {
     background: #fff;
-    color: #a7a2ce;
+    color: #777777;
     content: attr(data-content);
     display: inline-block;
     font-size: 0.7rem;
@@ -1403,7 +1405,7 @@ a.text-error:visited {
     transform: translateY(-0.65rem); }
 
 .divider {
-  border-top: 0.05rem solid #e6e5f1;
+  border-top: 0.05rem solid #aaaaaa;
   height: 0.05rem;
   margin: 0.4rem 0; }
   .divider[data-content] {
@@ -1413,7 +1415,7 @@ a.text-error:visited {
   display: block;
   padding: 0.8rem; }
   .divider-vert::before {
-    border-left: 0.05rem solid #e6e5f1;
+    border-left: 0.05rem solid #aaaaaa;
     bottom: 0.4rem;
     content: "";
     display: block;
@@ -1435,7 +1437,7 @@ a.text-error:visited {
   position: relative; }
   .loading::after {
     animation: loading 500ms infinite linear;
-    border: 0.1rem solid #454d5d;
+    border: 0.1rem solid #222;
     border-radius: 50%;
     border-right-color: transparent;
     border-top-color: transparent;
@@ -1679,6 +1681,12 @@ a.text-error:visited {
   hyphens: auto;
   word-break: break-word;
   word-wrap: break-word; }
+
+/*
+*/
+#header {
+  margin-top: 10%;
+  margin-bottom: 10%; }
 
 /* gallery thumbnails */
 .thumbs {

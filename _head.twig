@@ -71,8 +71,7 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="{{ asset('css/gurzr.css', 'theme') }}">
-    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
-
+    
     <!-- highlight.js -->
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/{{ theme.highlight_theme }}.min.css">
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
@@ -97,7 +96,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-gpx/1.3.1/gpx.min.js"></script>
     {% endif %}
-    
+
     <!-- custom CSS -->
     {% if file_exists('files/custom.css') %}
         <link rel="stylesheet" type="text/css" href="{{ asset('custom.css', 'files') }}">
