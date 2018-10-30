@@ -40,6 +40,19 @@ $base-font-family: "Vollkorn";
 #header{
 	margin-top: 10%;
 	margin-bottom: 10%;
+	a:hover{
+		text-decoration: none;
+	}
+}
+.navbar{
+	.btn-link.active{
+		text-decoration: underline;
+	}
+}
+.content{
+	img{
+		max-width: 100%;
+	}
 }
 /* gallery thumbnails */
 .thumbs {
