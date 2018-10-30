@@ -54,6 +54,7 @@
                 <a href="{{ record.link }}" class="readmore">
                     {% if record.image %}
                         <img src="{{ thumbnail(record.image, 'wide_500w') }}"
+                        class="img-responsive"
                         srcset="{{ thumbnail(record.image, 'wide_500w') }} 500w,
                         {{ thumbnail(record.image, 'wide_720w') }} 720w">
                     {% elseif record.introduction %}

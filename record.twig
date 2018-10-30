@@ -25,6 +25,7 @@
         {% block recordcontent %}
             {% if record.show_image_above_body and record.image %}
                 <img src="{{ record.image|thumbnail('scale_720w') }}"
+                class="img-responsive"
                 srcset="{{ record.image|thumbnail('scale_500w') }} 500w,
                 {{ record.image|thumbnail('scale_720w') }} 720w">
             {% endif %}
