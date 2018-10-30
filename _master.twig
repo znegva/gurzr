@@ -16,12 +16,11 @@
             </a>
         </h1>
 
-        <span class="lead text-center">
-          {% if config.get('general/payoff') %}
-            {{ config.get('general/payoff')|markdown }}
-          {% endif %}
+        {% if config.get('general/payoff') %}
+        <span class="text-center">
+          {{ config.get('general/payoff')|markdown }}
         </span>
-
+        {% endif %}
 
     </div>
 
