@@ -3,26 +3,29 @@
 
   {{ include('_head.twig') }}
 
-  <body class="container grid-md">
-
-    <div id="header">
-        <h1 class="text-center">
-            <a href="{{ path('homepage') }}">
-                {{ config.get('general/sitename') }}
-            </a>
-        </h1>
-        <span class="lead text-center">
-          {% if config.get('general/payoff') %}
-            {{ config.get('general/payoff')|markdown }}
-          {% endif %}
-        </span>
-    </div>
+  <body>
 
     {% block menu %}
       {{ menu('main', '_menu.twig') }}
     {% endblock menu %}
 
-    <div class="content mt-2">
+    <div id="header" class="container grid-md">
+        <h1 class="text-center">
+            <a href="{{ path('homepage') }}">
+                {{ config.get('general/sitename') }}
+            </a>
+        </h1>
+
+        <span class="lead text-center">
+          {% if config.get('general/payoff') %}
+            {{ config.get('general/payoff')|markdown }}
+          {% endif %}
+        </span>
+
+
+    </div>
+
+    <div class="content mt-2 container grid-md">
       {% block content %}{% endblock %}
     </div>
 
