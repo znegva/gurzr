@@ -26,6 +26,9 @@
 {% if record.use_password_protection %}
     <i class="fa fa-lock"></i>
 {% endif %}
+{% if record.gpx %}
+    <i class="fa fa-map-o"></i>
+{% endif %}
 
 {% if extended | default() %}
     -
