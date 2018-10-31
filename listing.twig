@@ -26,9 +26,15 @@
         {{ __('general.phrase.search') }}
       </h1>
         <form method="get" action="{{ path('search') }}" id="searchform-inline" enctype="text/plain">
-            <input type="search" value="{{ search|default() }}" placeholder="{{ __('general.phrase.search-ellipsis') }}" name="search">
-            <button type="submit" class="button">{{ __('general.phrase.search') }}
-            </button>
+            <div class="input-group">
+              <input type="text" value="{{ search|default() }}"
+                placeholder="{{ __('general.phrase.search-ellipsis') }}"
+                name="search"
+                class="form-input">
+              <button class="btn btn-primary input-group-btn">
+                {{ __('general.phrase.search') }}
+              </button>
+            </div>
         </form>
     {% endif %}
 
