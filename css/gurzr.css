@@ -1695,6 +1695,10 @@ a.text-error:visited {
 
 .content img {
   max-width: 100%; }
+.content .list-item {
+  margin-bottom: 5rem; }
+  .content .list-item .post-date {
+    margin-bottom: 0; }
 
 /* gallery thumbnails */
 .thumbs {

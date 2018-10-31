@@ -53,6 +53,15 @@ $base-font-family: "Vollkorn";
 	img{
 		max-width: 100%;
 	}
+	.list-item{
+		margin-bottom: 5rem;
+		.post-date{
+			margin-bottom: 0;
+		}
+		.post-infos{
+			
+		}
+	}
 }
 /* gallery thumbnails */
 .thumbs {

@@ -20,14 +20,19 @@ highlight_theme:           'dracula'
 
 # Aliases can be set to restrict images to a specific set of available
 # resolutions or to decouple image sizes from template files.
+# wide_xxxw are images in 4:3 ration
 thumbnails:
     aliases:
         wide_720w:
-            size:           [720, 200]
+            size:           [720, 540]
             cropping:       crop
             allow_upscale:  true
         wide_500w:
-            size:           [500, 140]
+            size:           [500, 375]
+            cropping:       crop
+            allow_upscale:  true
+        wide_200w:
+            size:           [200, 150]
             cropping:       crop
             allow_upscale:  true
         scale_720w:
@@ -35,6 +40,9 @@ thumbnails:
             allow_upscale: false
         scale_500w:
             size:          [500,0]
+            allow_upscale: false
+        scale_250w:
+            size:          [250,0]
             allow_upscale: false
         scale_250h:
             size:          [0,250]
