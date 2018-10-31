@@ -40,8 +40,8 @@ $base-font-family: "Vollkorn";
 #header{
 	margin-top: 10%;
 	margin-bottom: 10%;
-	a:hover{
-		text-decoration: none;
+	h1, form, p{
+		text-align: center;
 	}
 }
 .navbar{
@@ -55,11 +55,8 @@ $base-font-family: "Vollkorn";
 	}
 	.list-item{
 		margin-bottom: 5rem;
-		.post-date{
-			margin-bottom: 0;
-		}
-		.post-infos{
-			
+		p{
+			margin-bottom: 0px;
 		}
 	}
 }

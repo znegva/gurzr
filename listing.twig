@@ -1,7 +1,7 @@
 {% extends '_master.twig' %}
 
 {% block content %}
-
+  <div id="header">
     {# If used for listing a taxonomy, we add a heading.: #}
     {% if taxonomytype is defined %}
         <h1>
@@ -12,7 +12,6 @@
                 {{ slug }}
             {% endif %}
         </h1>
-        <hr>
         {# Taxonomies are fetched unordered by design except if 'has_sortorder'
        is set to true. This way we keep 'grouping' intact in the listing. #}
         {% if not taxonomy.has_sortorder %}
@@ -23,30 +22,31 @@
 
     {# if used for searches #}
     {% if search is defined %}
+      <h1>
+        {{ __('general.phrase.search') }}
+      </h1>
         <form method="get" action="{{ path('search') }}" id="searchform-inline" enctype="text/plain">
             <input type="search" value="{{ search|default() }}" placeholder="{{ __('general.phrase.search-ellipsis') }}" name="search">
             <button type="submit" class="button">{{ __('general.phrase.search') }}
             </button>
         </form>
-        <hr>
-
     {% endif %}
 
-    {# BEGIN normal listing stuff #}
+    {# contenttype listing #}
+    {% if contenttype is defined %}
+        <h1>
+          {{ contenttype }}
+        </h1>
+    {% endif %}
+  </div>
+
+  {# BEGIN normal listing stuff #}
 
     {% for record in records %}
         {% if not record.contenttype.hide_in_listings %}
         {# dont show anything if the contenttype has defined hide_in_listings = true #}
         <div class="columns list-item">
-          <div class="column col-4">
-            {% if record.image %}
-              <img src="{{ thumbnail(record.image, 'wide_500w') }}"
-                class="img-responsive"
-                srcset="{{ thumbnail(record.image, 'wide_200w') }} 200w,
-                  {{ thumbnail(record.image, 'wide_500w') }} 500w,
-                  {{ thumbnail(record.image, 'wide_720w') }} 720w">
-            {% endif %}
-          </div>
+
           <div class="column col-8">
 
             {% if record.contenttype.show_publish_date %}
@@ -55,7 +55,7 @@
               </p>
             {% endif %}
 
-            <h1 class="post-title">
+            <h2 class="post-title">
                 <a href="{{ record.link }}">
                     {{ record.title }}
                 </a>
@@ -75,14 +75,16 @@
               </a>
             </p>
 
-            {% block recordinfos %}
-                <span class="post-infos">
-                    {% include('_recordinfos.twig') %}
-                </span>
-            {% endblock recordinfos %}
-
           </div>
-
+          <div class="column col-4">
+            {% if record.image %}
+              <img src="{{ thumbnail(record.image, 'wide_500w') }}"
+                class="img-responsive"
+                srcset="{{ thumbnail(record.image, 'wide_200w') }} 200w,
+                  {{ thumbnail(record.image, 'wide_500w') }} 500w,
+                  {{ thumbnail(record.image, 'wide_720w') }} 720w">
+            {% endif %}
+          </div>
 
 
 

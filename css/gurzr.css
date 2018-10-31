@@ -1687,8 +1687,8 @@ a.text-error:visited {
 #header {
   margin-top: 10%;
   margin-bottom: 10%; }
-  #header a:hover {
-    text-decoration: none; }
+  #header h1, #header form, #header p {
+    text-align: center; }
 
 .navbar .btn-link.active {
   text-decoration: underline; }
@@ -1697,8 +1697,8 @@ a.text-error:visited {
   max-width: 100%; }
 .content .list-item {
   margin-bottom: 5rem; }
-  .content .list-item .post-date {
-    margin-bottom: 0; }
+  .content .list-item p {
+    margin-bottom: 0px; }
 
 /* gallery thumbnails */
 .thumbs {

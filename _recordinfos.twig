@@ -1,5 +1,12 @@
 {# This file is inserted as the 'info' of each listed record and inside the record #}
 
+{% if record.contenttype.show_publish_date %}
+  <p class="post-date text-center">
+    {{ record.datepublish|localedatetime("%d.%m.%Y") }}
+  </p>
+{% endif %}
+
+<p class="text-center">
 {% if record.taxonomy is defined %}
     {% for type, values in record.taxonomy %}
         {% if type in record.contenttype.shown_taxonomy %}
@@ -23,6 +30,7 @@
 {% if record.gpx %}
     <i class="fa fa-map-o"></i>
 {% endif %}
+</p>
 
 {% if extended | default() %}
     -
