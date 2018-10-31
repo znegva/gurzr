@@ -44,6 +44,10 @@ $base-font-family: "Vollkorn";
 	h1, form, p{
 		text-align: center;
 	}
+	a,i{
+		margin-left: 0.3rem;
+		margin-right: 0.3rem;
+	}
 }
 .navbar{
 	.btn-link.active{

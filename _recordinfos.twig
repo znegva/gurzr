@@ -31,9 +31,3 @@
     <i class="fa fa-map-o"></i>
 {% endif %}
 </p>
-
-{% if extended | default() %}
-    -
-    <a href="{{ record.link() }}">{{ __('general.phrase.permalink') }}</a>
-    -
-{% endif %}

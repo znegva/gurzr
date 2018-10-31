@@ -2057,6 +2057,9 @@ a.text-error:visited {
   margin-bottom: 10%; }
   #header h1, #header form, #header p {
     text-align: center; }
+  #header a, #header i {
+    margin-left: 0.3rem;
+    margin-right: 0.3rem; }
 
 .navbar .btn-link.active {
   text-decoration: underline; }
