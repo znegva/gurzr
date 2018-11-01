@@ -2080,6 +2080,14 @@ a.text-error:visited {
     float: left;
     margin-right: 0.3rem; }
 
+/* some styling for the Bold default pagination */
+.pagination {
+  margin: auto; }
+  .pagination .active {
+    text-decoration: underline; }
+  .pagination li {
+    margin-right: 1rem; }
+
 /* gallery thumbnails */
 .thumbs {
   display: flex;
