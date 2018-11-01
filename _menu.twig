@@ -4,19 +4,10 @@
 
   <section class="navbar-section">
     {% for item in menu %}
-        {% if item.class == 'menusearch' %}
-            <!--form method="get" action="{{ path('search') }}" id="searchform-sidebar" enctype="text/plain">
-                <input type="search" value="{{ search|default() }}" placeholder="{{ item.label }}" name="search">
-                <button type="submit" class="button">
-                    {{ __('general.phrase.search') }}
-                </button>
-            </form-->
-        {% else %}
-            <a  class="btn btn-link{% if item|current %} active{% endif %}"
-                href="{{ item.link }}">
-                {{ item.label }}
-            </a>
-        {% endif %}
+      <a  class="{% if item|current %} active{% endif %}"
+          href="{{ item.link }}">
+        {{ item.label }}
+      </a>
     {% endfor %}
   </section>
 </header>
