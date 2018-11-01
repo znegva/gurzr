@@ -62,18 +62,18 @@
   {% set relatedrecords = record.related() %}
   {% if relatedrecords is not empty %}
     <div class="related">
-      <h2>
+      <h4>
         {{ __('general.phrase.related-content') }}
-      </h2>
+      </h4>
       <ul class="related-posts">
         {% for related in relatedrecords %}
         <li>
-          <h3>
+          <h5>
             <a href="{{ related.link }}">
               {{ related.title }}
-              <small>{{ related.datepublish|localedatetime("%d.%m.%Y") }}</small>
             </a>
-          </h3>
+          </h5>
+          <small>{{ related.datepublish|localedatetime("%d.%m.%Y") }}</small>
         </li>
         {% endfor %}
       </ul>

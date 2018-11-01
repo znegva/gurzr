@@ -88,6 +88,21 @@ $base-font-family: "Vollkorn";
 	}
 }
 
+/* related records */
+.related{
+	margin-top: 5rem;
+	ul{
+		margin: 0;
+	}
+	li{
+		padding-left: 0;
+		list-style: none;
+		h5{
+			display: inline;
+		}
+	}
+}
+
 
 /* gallery thumbnails */
 .thumbs {

@@ -2088,6 +2088,17 @@ a.text-error:visited {
   .pagination li {
     margin-right: 1rem; }
 
+/* related records */
+.related {
+  margin-top: 5rem; }
+  .related ul {
+    margin: 0; }
+  .related li {
+    padding-left: 0;
+    list-style: none; }
+    .related li h5 {
+      display: inline; }
+
 /* gallery thumbnails */
 .thumbs {
   display: flex;
