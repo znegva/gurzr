@@ -65,6 +65,18 @@ $base-font-family: "Vollkorn";
 		}
 	}
 }
+/* copyright notice */
+.copyright {
+  font-size: 80%;
+  //padding-top: 1rem;
+	dt {
+	   display: inline;
+	   float: left;
+		 margin-right: 0.3rem;
+	}
+}
+
+
 /* gallery thumbnails */
 .thumbs {
 	display: flex;

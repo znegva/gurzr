@@ -2070,6 +2070,13 @@ a.text-error:visited {
   margin-bottom: 5rem; }
   .content .list-item p {
     margin-bottom: 0px; }
+/* copyright notice */
+.copyright {
+  font-size: 80%; }
+  .copyright dt {
+    display: inline;
+    float: left;
+    margin-right: 0.3rem; }
 
 /* gallery thumbnails */
 .thumbs {
