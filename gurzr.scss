@@ -41,12 +41,13 @@ $base-font-family: "Vollkorn";
 #header{
 	margin-top: 10%;
 	margin-bottom: 10%;
-	h1, form, p{
-		text-align: center;
-	}
+	text-align: center;
 	a,i{
 		margin-left: 0.3rem;
 		margin-right: 0.3rem;
+	}
+	.taxonomies{
+		margin-top: 1rem;
 	}
 }
 .navbar{
@@ -60,8 +61,8 @@ $base-font-family: "Vollkorn";
 	}
 	.list-item{
 		margin-bottom: 5rem;
-		p{
-			margin-bottom: 0px;
+		i{
+			margin-left: 0.3rem;
 		}
 	}
 }

@@ -56,9 +56,10 @@
           <div class="column col-8">
 
             {% if record.contenttype.show_publish_date %}
-              <p class="post-date">
-                {{ record.datepublish|localedatetime("%d.%m.%Y") }}
-              </p>
+              {{ record.datepublish|localedatetime("%d.%m.%Y") }}
+            {% endif %}
+            {% if record.use_password_protection %}
+                <i class="fa fa-lock"></i>
             {% endif %}
 
             <h2 class="post-title">

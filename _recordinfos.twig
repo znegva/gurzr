@@ -1,13 +1,15 @@
 {# This file is inserted as the 'info' of each listed record and inside the record #}
 
 {% if record.contenttype.show_publish_date %}
-  <p class="post-date text-center">
-    {{ record.datepublish|localedatetime("%d.%m.%Y") }}
-  </p>
+  {{ record.datepublish|localedatetime("%d.%m.%Y") }}
 {% endif %}
 
-<p class="text-center">
+{% if record.use_password_protection %}
+    <i class="fa fa-lock"></i>
+{% endif %}
+
 {% if record.taxonomy is defined %}
+  <p class="taxonomies">
     {% for type, values in record.taxonomy %}
         {% if type in record.contenttype.shown_taxonomy %}
             {% set prefix = type == "tags"
@@ -22,12 +24,5 @@
             {% endfor %}
         {% endif %}
     {% endfor %}
+  </p>
 {% endif %}
-
-{% if record.use_password_protection %}
-    <i class="fa fa-lock"></i>
-{% endif %}
-{% if record.gpx %}
-    <i class="fa fa-map-o"></i>
-{% endif %}
-</p>

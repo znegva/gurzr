@@ -2054,12 +2054,13 @@ a.text-error:visited {
 */
 #header {
   margin-top: 10%;
-  margin-bottom: 10%; }
-  #header h1, #header form, #header p {
-    text-align: center; }
+  margin-bottom: 10%;
+  text-align: center; }
   #header a, #header i {
     margin-left: 0.3rem;
     margin-right: 0.3rem; }
+  #header .taxonomies {
+    margin-top: 1rem; }
 
 .navbar .btn-link.active {
   text-decoration: underline; }
@@ -2068,8 +2069,9 @@ a.text-error:visited {
   max-width: 100%; }
 .content .list-item {
   margin-bottom: 5rem; }
-  .content .list-item p {
-    margin-bottom: 0px; }
+  .content .list-item i {
+    margin-left: 0.3rem; }
+
 /* copyright notice */
 .copyright {
   font-size: 80%; }
