@@ -2097,14 +2097,14 @@ a.text-error:visited {
       color: #79c753 !important; }
 
 /* related records */
-.related {
+.related, .latest {
   margin-top: 5rem; }
-  .related ul {
+  .related ul, .latest ul {
     margin: 0; }
-  .related li {
+  .related li, .latest li {
     padding-left: 0;
     list-style: none; }
-    .related li h5 {
+    .related li h5, .latest li h5 {
       display: inline; }
 
 /* gallery thumbnails */
