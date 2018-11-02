@@ -104,8 +104,13 @@ $base-font-family: "Vollkorn";
 }
 
 /* related records */
-.related, .latest{
+.related{
 	margin-top: 5rem;
+}
+.latest{
+	margin-bottom: 5rem;
+}
+.related, .latest{
 	ul{
 		margin: 0;
 	}
