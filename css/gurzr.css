@@ -2097,6 +2097,12 @@ a.text-error:visited {
     margin-right: 0.3rem; }
   #header .taxonomies {
     margin-top: 1rem; }
+    #header .taxonomies a.tags::before {
+      content: "#"; }
+    #header .taxonomies a.categories {
+      font-weight: bold; }
+      #header .taxonomies a.categories::before {
+        content: "@"; }
 
 .navbar a {
   margin: 0.5rem; }

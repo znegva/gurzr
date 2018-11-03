@@ -61,6 +61,19 @@ $base-font-family: "Vollkorn";
 	@extend %sober-links;
 	.taxonomies{
 		margin-top: 1rem;
+		a{
+			&.tags{
+				&::before{
+  				content: "#";
+				}
+			}
+			&.categories{
+				font-weight: bold;
+				&::before{
+  				content: "@";
+				}
+			}
+		}
 	}
 }
 .navbar{

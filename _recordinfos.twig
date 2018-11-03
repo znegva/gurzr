@@ -12,15 +12,8 @@
   <p class="taxonomies">
     {% for type, values in record.taxonomy %}
         {% if type not in record.contenttype.hidden_taxonomy %}
-            {% set prefix = type == "tags"
-                ? '#'
-                : type == "categories"
-                    ? '@'
-                    : '' %}
             {% for link, value in values %}
-                <a href="{{ link }}">
-                    {{ prefix }}{{ value }}
-                </a>
+                <a href="{{ link }}" class="{{ type }}">{{ value }}</a>
             {% endfor %}
         {% endif %}
     {% endfor %}

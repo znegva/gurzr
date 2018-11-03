@@ -70,10 +70,14 @@ otherwise the themes [default favicon](images/favicon.png) will be used.
 You can upload your own CSS-file to change some small things.
 The file has to be named `custom.css` and be placed in the top level of your files-directory.
 
-A typical `custom.css` (to change the color for links) can be:
+An example use of the `custom.css` is to change or add the prefix of taxonomy-links
+in the header-section of record-pages. By default `tags` will be prefixed with a
+hash #, `categories` will be prefixed with an @.  
+Each taxonomy-link is being supplemented by its taxonomy-name as class name, so
+to change the prefix of all tags to ♥ you could add the following to your `custom.css`:
 ```css
-a{
-    color: red;
+#header .taxonomies a.tags::before{
+	content: '♥' !important;
 }
 ```
 
@@ -113,11 +117,10 @@ If you dont want taxonomy `tags` to be shown, just add
 Hereby it is possible to use some taxonomies internally but not showing them to
 your visitors.
 
-Tags will be prefixed with a hash #, categories will be prefixed with an @.
-
 The `publish_date` rule applies for listings and the records-page,
 `hidden_taxonomies` is applied only to the record page, as we do not show
 taxonomies in listings.
+
 
 ### Subtitle
 
