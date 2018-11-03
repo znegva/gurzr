@@ -15,7 +15,7 @@
 
 # theme for highlingthing code blocks, see https://highlightjs.org/static/demo/
 # for previews of all supported themes
-highlight_theme:           'dracula'
+highlight_theme:           'zenburn'
 
 
 # Aliases can be set to restrict images to a specific set of available

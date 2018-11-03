@@ -1120,6 +1120,34 @@ video.video-responsive {
     color: #4b4b4b;
     margin-top: 0.4rem; }
 
+code {
+  border-radius: 0.1rem;
+  line-height: 1.2;
+  padding: .1rem .2rem;
+  background: #fcf2f2;
+  color: #d73e48;
+  font-size: 85%; }
+
+.code {
+  border-radius: 0.1rem;
+  color: #323232;
+  position: relative; }
+  .code::before {
+    color: #8b8b8b;
+    content: attr(data-lang);
+    font-size: 0.7rem;
+    position: absolute;
+    right: 0.4rem;
+    top: 0.1rem; }
+  .code code {
+    background: #cdcdcd;
+    color: inherit;
+    display: block;
+    line-height: 1.5;
+    overflow-x: auto;
+    padding: 1rem;
+    width: 100%; }
+
 .container {
   margin-left: auto;
   margin-right: auto;

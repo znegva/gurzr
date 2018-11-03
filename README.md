@@ -12,7 +12,7 @@ __this project is work-in-progress atm!__
 - [x] maintenance template
 - [ ] default favicon?
 - [ ] is custom.css working?
-- [ ] check `pre` content and highlight.js
+- [x] check `pre` content and highlight.js
 - [ ] update this readme
 - [ ] provide example contenttype-definition
 - [ ] cleanup thumbnails in theme.yml (check `_gallery.twig` !)
