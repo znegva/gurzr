@@ -13,11 +13,6 @@
 # notfound:                notfound.twig
 
 
-# theme for highlingthing code blocks, see https://highlightjs.org/static/demo/
-# for previews of all supported themes
-highlight_theme:           'zenburn'
-
-
 # Aliases can be set to restrict images to a specific set of available
 # resolutions or to decouple image sizes from template files.
 # wide_xxxw are images in 4:3 ration

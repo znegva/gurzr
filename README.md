@@ -64,6 +64,15 @@ the [Open Street Map Project](https://www.openstreetmap.org), some symbols from
 [Font Awesome](http://fontawesome.io/) are used in the footer to indicate
 distance, duration and elevations of your track.
 
+### Code highlighting
+
+Code blocks are highlighted using [highlight.js](https://highlightjs.org/), the
+theme used for highlighting can be defined in your `config.yml` via the parameter
+`highlight_theme` (use only lowercase, eg: `highlight_theme: dracula`), see the
+[highlight.js demo page](https://highlightjs.org/static/demo/) for previews of
+the different themes.
+
+
 ### Optional publishing of date and taxonomies
 
 You can define for which ContentTypes the publishing date will be displayed
