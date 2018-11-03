@@ -70,13 +70,14 @@
 
             <p class="post-teaser">
               <a href="{{ record.link }}" class="readmore">
-                                {% if record.introduction %}
+                {% if record.introduction %}
                   {{ record.introduction }}
                 {% elseif record.teaser and record.teaser != "" %}
                   {{ record.teaser }}
                 {% else %}
+                  {% set con = record.body ~ record.content %}
                   <span>
-                    {{ record.excerpt(250, false, search|default('')) }}
+                    {{ con|excerpt(250, false, search|default('')) }}
                   </span>
                 {% endif %}
               </a>
