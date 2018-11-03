@@ -210,7 +210,7 @@ The notice will be added below your content, and below the gallery (if there is 
 - [ ] provide example contenttype-definition
 - [x] cleanup thumbnails in theme.yml (check `_gallery.twig` !)
 - [ ] support fa-icons in menu
-- [ ] check scss-includes, minify generated css
+- [x] check scss-includes, <s>minify generated css</s>
 
 ## License
 

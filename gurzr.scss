@@ -20,7 +20,7 @@ $base-font-family: "Vollkorn";
 @import "node_modules/spectre.css/src/typography";
 @import "node_modules/spectre.css/src/buttons";
 @import "node_modules/spectre.css/src/forms";
-@import "node_modules/spectre.css/src/labels";
+//@import "node_modules/spectre.css/src/labels";
 @import "node_modules/spectre.css/src/media";
 @import "node_modules/spectre.css/src/codes";
 
@@ -29,11 +29,11 @@ $base-font-family: "Vollkorn";
 @import "node_modules/spectre.css/src/navbar";
 
 // Components
-@import "node_modules/spectre.css/src/menus";
+//@import "node_modules/spectre.css/src/menus";
 @import "node_modules/spectre.css/src/pagination";
 
 // Utility classes
-@import "node_modules/spectre.css/src/animations";
+//@import "node_modules/spectre.css/src/animations";
 @import "node_modules/spectre.css/src/utilities";
 
 
