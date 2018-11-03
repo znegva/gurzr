@@ -34,16 +34,35 @@ otherwise the themes [default favicon](images/favicon.png) will be used.
 You can upload your own CSS-file to change some small things.
 The file has to be named `custom.css` and be placed in the top level of your files-directory.
 
-__Note:__ this is only working if the `css` is provided with the correct Content-Type,
-a [Pull Request to the Bolt CMS repo](https://github.com/bolt/bolt/pull/6964) was created, please check if it was accepted
-or add the necessary change to your installation of Bolt if you want to use this feature.
-
 A typical `custom.css` (to change the color for links) can be:
 ```css
 a{
     color: red;
 }
 ```
+
+### Galleries
+
+gurzr supports galleries - to use them just add a field `gallery` with
+`type: imagelist` to your ContentType.  
+[PhotoSwipe](http://photoswipe.com/) is used as lightbox for the gallery images.
+
+Captions can be shown optionally, to manage this behavior add a field
+`show_gallery_captions` with `type: checkbox` to your ContentType.
+
+### GPX tracks
+
+If you regularly publish gpx tracks with your posts, you can add a field `gpx`
+with `type: file` to your ContentType.
+You also have to extend `accept_file_types` in `config.yml` to accept
+`gpx`-files in order to be able to upload your tracks. If a nonempty field `gpx`
+is found in your record a map is drawn right below the content (and above a gallery, if there is one).
+
+The map is created using [leaflet](http://leafletjs.com/) and
+[leaflet-gpx](https://github.com/mpetazzoni/leaflet-gpx) and uses maptiles from
+the [Open Street Map Project](https://www.openstreetmap.org), some symbols from
+[Font Awesome](http://fontawesome.io/) are used in the footer to indicate
+distance, duration and elevations of your track.
 
 ### Optional publishing of date and taxonomies
 
