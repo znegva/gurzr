@@ -123,6 +123,19 @@ $base-font-family: "Vollkorn";
 	}
 }
 
+/* style the login-form */
+.passwordprotect{
+	label{
+		@extend .form-label;
+	}
+	input{
+		@extend .form-input;
+	}
+	#form>div{
+		@extend .form-group;
+	}
+}
+
 
 /* gallery thumbnails */
 .thumbs {
