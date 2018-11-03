@@ -70,6 +70,7 @@ $base-font-family: "Vollkorn";
 	@extend %sober-links;
 }
 .content{
+	margin-bottom: 4rem;
 	img{
 		max-width: 100%;
 	}
@@ -79,6 +80,9 @@ $base-font-family: "Vollkorn";
 			margin-left: 0.3rem;
 		}
 		@extend %sober-links;
+	}
+	small i.fa{
+		margin-left: 0.3rem;
 	}
 }
 /* copyright notice */

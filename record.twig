@@ -80,7 +80,12 @@
               {{ related.title }}
             </a>
           </h5>
-          <small>{{ related.datepublish|localedatetime("%d.%m.%Y") }}</small>
+          <small>
+            {{ related.datepublish|localedatetime("%d.%m.%Y") }}
+            {% if related.use_password_protection %}
+                <i class="fa fa-lock"></i>
+            {% endif %}
+          </small>
         </li>
         {% endfor %}
       </ul>

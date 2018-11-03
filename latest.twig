@@ -15,7 +15,12 @@
                 {{ record.title }}
               </a>
             </h5>
-            <small>{{ record.datepublish|localedatetime("%d.%m.%Y") }}</small>
+            <small>
+              {{ record.datepublish|localedatetime("%d.%m.%Y") }}
+              {% if record.use_password_protection %}
+                  <i class="fa fa-lock"></i>
+              {% endif %}
+            </small>
           </li>
         {% else %}
           <li>

@@ -2101,11 +2101,15 @@ a.text-error:visited {
 .navbar a {
   margin: 0.5rem; }
 
-.content img {
-  max-width: 100%; }
-.content .list-item {
-  margin-bottom: 5rem; }
-  .content .list-item i {
+.content {
+  margin-bottom: 4rem; }
+  .content img {
+    max-width: 100%; }
+  .content .list-item {
+    margin-bottom: 5rem; }
+    .content .list-item i {
+      margin-left: 0.3rem; }
+  .content small i.fa {
     margin-left: 0.3rem; }
 
 /* copyright notice */
