@@ -17,6 +17,13 @@
     <h1>
       {{ record.title }}
     </h1>
+
+    {% if record.subtitle %}
+      <div class="text-center">
+        {{ record.subtitle |markdown }}
+      </div>
+    {% endif %}
+
     {% block recordinfos %}
         {% include('_recordinfos.twig') %}
     {% endblock recordinfos %}
