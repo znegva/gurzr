@@ -23,6 +23,28 @@ __this project is work-in-progress atm!__
 
 ## Features
 
+### Favicon
+
+Just add a `favicon.png` with at least size of 180px*180px at the top level of
+your files-folder and it will be used as _favicon_ as well as _apple-touch-icon_,
+otherwise the themes [default favicon](images/favicon.png) will be used.
+
+### Custom CSS
+
+You can upload your own CSS-file to change some small things.
+The file has to be named `custom.css` and be placed in the top level of your files-directory.
+
+__Note:__ this is only working if the `css` is provided with the correct Content-Type,
+a [Pull Request to the Bolt CMS repo](https://github.com/bolt/bolt/pull/6964) was created, please check if it was accepted
+or add the necessary change to your installation of Bolt if you want to use this feature.
+
+A typical `custom.css` (to change the color for links) can be:
+```css
+a{
+    color: red;
+}
+```
+
 ### Optional publishing of date and taxonomies
 
 You can define for which ContentTypes the publishing date will be displayed
