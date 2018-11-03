@@ -53,7 +53,7 @@
         {# dont show anything if the contenttype has defined hide_in_listings = true #}
         <div class="columns list-item">
 
-          <div class="column col-8 col-xs-12">
+          <div class="column col-7 col-sm-12">
 
             {% if record.contenttype.show_publish_date %}
               {{ record.datepublish|localedatetime("%d.%m.%Y") }}
@@ -83,13 +83,13 @@
             </p>
 
           </div>
-          <div class="column col-4 col-xs-12">
+          <div class="column col-5 col-sm-12">
             {% if record.image %}
-              <img src="{{ thumbnail(record.image, 'wide_500w') }}"
+              <img src="{{ thumbnail(record.image, 'listing_600w') }}"
                 class="img-responsive"
-                srcset="{{ thumbnail(record.image, 'wide_200w') }} 200w,
-                  {{ thumbnail(record.image, 'wide_500w') }} 500w,
-                  {{ thumbnail(record.image, 'wide_720w') }} 720w">
+                srcset="{{ thumbnail(record.image, 'listing_240w') }} 240w,
+                  {{ thumbnail(record.image, 'listing_344w') }} 344w,
+                  {{ thumbnail(record.image, 'listing_600w') }} 600w">
             {% endif %}
           </div>
 

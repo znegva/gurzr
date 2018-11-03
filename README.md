@@ -205,7 +205,7 @@ The notice will be added below your content, and below the gallery (if there is 
 
 - [ ] add image to readme
 - [ ] provide example contenttype-definition
-- [ ] cleanup thumbnails in theme.yml (check `_gallery.twig` !)
+- [x] cleanup thumbnails in theme.yml (check `_gallery.twig` !)
 - [ ] support fa-icons in menu
 - [ ] check scss-includes, minify generated css
 

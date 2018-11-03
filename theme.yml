@@ -18,27 +18,27 @@
 # wide_xxxw are images in 4:3 ration
 thumbnails:
     aliases:
-        wide_720w:
-            size:           [720, 540]
+        listing_600w:
+            size:           [600, 450]
             cropping:       crop
             allow_upscale:  true
-        wide_500w:
-            size:           [500, 375]
+        listing_344w:
+            size:           [344, 258]
             cropping:       crop
             allow_upscale:  true
-        wide_200w:
-            size:           [200, 150]
+        listing_240w:
+            size:           [240, 180]
             cropping:       crop
             allow_upscale:  true
-        scale_720w:
-            size:          [720,0]
+        leadimage_840w:
+            size:          [840,0]
             allow_upscale: false
-        scale_500w:
+        leadimage_500w:
             size:          [500,0]
             allow_upscale: false
-        scale_250w:
-            size:          [250,0]
+        leadimage_350w:
+            size:          [350,0]
             allow_upscale: false
-        scale_250h:
+        gallery_250h:
             size:          [0,250]
             allow_upscale: false

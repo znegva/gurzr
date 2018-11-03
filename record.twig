@@ -31,10 +31,11 @@
 
   {% block recordcontent %}
     {% if record.show_image_above_body and record.image %}
-      <img src="{{ record.image|thumbnail('scale_720w') }}"
+      <img src="{{ record.image|thumbnail('leadimage_840w') }}"
           class="img-responsive"
-          srcset="{{ record.image|thumbnail('scale_500w') }} 500w,
-          {{ record.image|thumbnail('scale_720w') }} 720w">
+          srcset="{{ record.image|thumbnail('leadimage_350w') }} 350w,
+          {{ record.image|thumbnail('leadimage_500w') }} 500w,
+          {{ record.image|thumbnail('leadimage_840w') }} 840w">
     {% endif %}
     {% if record.body %}
       {{ record.body }}
