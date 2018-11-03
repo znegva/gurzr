@@ -1,0 +1,23 @@
+{% extends '_master.twig' %}
+
+{% block menu %}
+  {# no menu in maintenance mode! #}
+{% endblock %}
+{% setcontent m = 'block/maintenance' %}
+{% block content %}
+  {% if m and m.title and m.content %}
+    <div id="header">
+      <h1>
+        {{ m.title }}
+      </h1>
+      {{ m.content }}
+    </div>
+  {% else %}
+    <div id="header">
+      <h1>
+        {{ __('general.phrase.maintenance') }}
+      </h1>
+      {{ __('See You Later, Alligator.') }}
+    </div>
+  {% endif %}
+{% endblock content %}

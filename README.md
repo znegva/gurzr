@@ -9,7 +9,7 @@ __this project is work-in-progress atm!__
 - [x] archive template
 - [x] latest posts template
 - [x] login template + custom passwordform.twig
-- [ ] maintenance template
+- [x] maintenance template
 - [ ] default favicon?
 - [ ] is custom.css working?
 - [ ] check `pre` content and highlight.js
