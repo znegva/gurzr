@@ -124,7 +124,7 @@ taxonomies in listings.
 
 ### Subtitle
 
-You can define a markdown `subtitles`-field in your ContentType, this subtitle will
+You can define a markdown `subtitle`-field in your ContentType, this subtitle will
 be rendered centered right below the title, above date and taxonomies
 (if they are published, see above).
 
@@ -208,9 +208,7 @@ The notice will be added below your content, and below the gallery (if there is 
 
 - [ ] add image to readme
 - [ ] provide example contenttype-definition
-- [x] cleanup thumbnails in theme.yml (check `_gallery.twig` !)
 - [ ] support fa-icons in menu
-- [x] check scss-includes, <s>minify generated css</s>
 
 ## License
 
