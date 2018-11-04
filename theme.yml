@@ -19,15 +19,15 @@
 thumbnails:
     aliases:
         listing_600w:
-            size:           [600, 450]
+            size:           [600, 360]
             cropping:       crop
             allow_upscale:  true
-        listing_344w:
-            size:           [344, 258]
+        listing_350w:
+            size:           [350, 210]
             cropping:       crop
             allow_upscale:  true
-        listing_240w:
-            size:           [240, 180]
+        listing_250w:
+            size:           [250, 150]
             cropping:       crop
             allow_upscale:  true
         leadimage_840w:
