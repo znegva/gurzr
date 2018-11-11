@@ -113,7 +113,7 @@ Typically you don't want to show the publishdate for pages.
 
 Display of taxonomies can also be controlled via ContentType definition.
 If you dont want taxonomy `tags` to be shown, just add
-`hidden_taxonomies: [ tags ]` to your ContentType definition.
+`hidden_taxonomy: [ tags ]` to your ContentType definition.
 Hereby it is possible to use some taxonomies internally but not showing them to
 your visitors.
 
