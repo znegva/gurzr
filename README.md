@@ -204,10 +204,110 @@ If you regularly use content which needs a copyright notice, just add a field
 `copyright` with `type: html` or `type:markdown` to your ContentType.
 The notice will be added below your content, and below the gallery (if there is one).
 
+## Example ContentType definition
+
+An example ContentType-definition in your `contenttypes.yml` could be something like:
+```yml
+pages:
+    name: Pages
+    singular_name: Page
+    fields:
+        title:
+            type: text
+            class: large
+            group: content
+        slug:
+            type: slug
+            uses: title
+        subtitle:
+            type: markdown
+            height: 100px
+            group: content
+        image:
+            type: image
+        teaser:
+            type: markdown
+            height: 150px
+        body:
+            type: html
+            height: 300px
+        template:
+            type: templateselect
+            filter: '*.twig'
+    taxonomy: [ groups ]
+    hidden_taxonomy: [ groups ]
+    hide_publish_date: true
+    viewless: false
+    searchable: false
+    recordsperpage: 10
+    hide_publish_date: true
+    hide_in_listings: true
+
+posts:
+    name: Posts
+    singular_name: Post
+    slug: posts
+    singular_slug: post
+    fields:
+        title:
+            type: text
+            class: large
+            group: content
+        slug:
+            type: slug
+            uses: title
+        body:
+            type: markdown
+            height: 300px
+        image:
+            type: image
+            group: content
+        show_image_above_body:
+            type: checkbox
+            default: false
+            label: "Shall the teaserimage be shown above the content?"
+            group: content
+        use_password_protection:
+            type: checkbox
+            default: false
+            label: 'Use the password protection provided by the PasswordProtect extension'
+            variant: inline
+
+        gallery:
+            type: imagelist
+            extensions: [ gif, jpg, png ]
+            group: content
+        show_gallery_captions:
+            type: checkbox
+            default: false
+            label: 'Show captions for gallery'
+            variant: inline
+
+        copyright:
+            type: markdown
+            group: content
+
+        gpx:
+            type: file
+            extensions: [ gpx ]
+            group: content
+            label: 'GPX track related to the post'
+    relations:
+        posts:
+            multiple: true
+            order: title
+            label: Select related other posts
+    taxonomy: [ groups, categories, tags ]
+    hidden_taxonomy: [ groups ]
+    default_status: published
+    sort: -datepublish
+    recordsperpage: 5
+```
+
 ## ToDo
 
 - [ ] add image to readme
-- [ ] provide example contenttype-definition
+- [x] provide example contenttype-definition
 - [ ] support fa-icons in menu
 
 ## License
