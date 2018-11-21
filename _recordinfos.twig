@@ -1,6 +1,6 @@
 {# This file is inserted as the 'info' of each listed record and inside the record #}
 
-{% if record.contenttype.show_publish_date %}
+{% if not record.contenttype.hide_publish_date %}
   {{ record.datepublish|localedatetime("%d.%m.%Y") }}
 {% endif %}
 

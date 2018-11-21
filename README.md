@@ -106,10 +106,10 @@ distance, duration and elevations of your track.
 
 ### Optional publishing of date and taxonomies
 
-You can define for which ContentTypes the publishing date will be displayed
-by adding `show_publishdate: true` to your ContentTypes values in
+You can define for which ContentTypes the publishing date will be hidden
+by adding `hide_publish_date: true` to your ContentTypes values in
 `config://contenttypes.yml`.
-Typically you don't want to show the publishdate for pages.
+Typically you don't want to show the _publishdate_ for pages.
 
 Display of taxonomies can also be controlled via ContentType definition.
 If you dont want taxonomy `tags` to be shown, just add

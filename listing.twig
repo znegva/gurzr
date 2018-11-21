@@ -56,7 +56,7 @@
 
           <div class="column col-7 col-sm-12">
 
-            {% if record.contenttype.show_publish_date %}
+            {% if not record.contenttype.hide_publish_date %}
               {{ record.datepublish|localedatetime("%d.%m.%Y") }}
             {% endif %}
             {% if record.use_password_protection %}
