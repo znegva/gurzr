@@ -32,6 +32,7 @@ the [Open Street Map Project](https://www.openstreetmap.org) to present gpx-trac
 	- [Password Protection Extension](#password-protection-extension)
 	- [Code highlighting](#code-highlighting)
 	- [Copyright notice](#copyright-notice)
+- [Example ContentType definition](#example-contenttype-definition)
 - [ToDo](#todo)
 - [License](#license)
 
