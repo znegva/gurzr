@@ -310,6 +310,7 @@ posts:
 - [ ] add image to readme
 - [x] provide example contenttype-definition
 - [ ] support fa-icons in menu
+- [x] fix `active`-class in menu for pagination-pages of listings and search results
 
 ## License
 

@@ -4,7 +4,7 @@
 
   <section class="navbar-section">
     {% for item in menu %}
-      <a  class="{% if ( item|current ) or ( record.contenttype.slug in item.link ) %} active{% endif %}"
+      <a  class="{% if ( item|current ) or ( (item.link ~ "?page_") in app.request.uri ) or ( (item.link ~ "?search=") in app.request.uri ) or ( record.contenttype.slug in item.link ) %} active{% endif %}"
           href="{{ item.link }}">
         {{ item.label }}
       </a>
