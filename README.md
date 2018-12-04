@@ -13,10 +13,12 @@ the [Open Street Map Project](https://www.openstreetmap.org) to present gpx-trac
 - [Font Awesome](http://fontawesome.io/) for all kinds of icons
 - [PasswordProtect extension](https://github.com/bobdenotter/PasswordProtect) to enable basic protection for private pages
 
----
+
+![screenshot 2018-12-04 at 23 44 34](https://user-images.githubusercontent.com/7450884/49477941-b853b100-f81e-11e8-9658-4f5af81c2e4d.png)
 
 <!-- TOC depthFrom:2 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
 
+- [Static Demo](#static-demo)
 - [Features](#features)
 	- [Menu](#menu)
 	- [Custom Favicon](#custom-favicon)
@@ -37,6 +39,10 @@ the [Open Street Map Project](https://www.openstreetmap.org) to present gpx-trac
 - [License](#license)
 
 <!-- /TOC -->
+
+## Static Demo
+
+A static demo of the theme can be found [here](https://znegva.github.io/bolt_themes_static_pages/gurzr/index.html).
 
 ## Features
 
