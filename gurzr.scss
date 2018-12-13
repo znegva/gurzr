@@ -36,6 +36,19 @@ $base-font-family: "Vollkorn";
 //@import "node_modules/spectre.css/src/animations";
 @import "node_modules/spectre.css/src/utilities";
 
+/*
+ * make font size a bit more mobile friendly
+ */
+ @media (max-width: $size-md) {
+ 	html{
+ 		font-size: 18px;
+ 	}
+ }
+ @media (max-width: $size-sm) {
+   html{
+     font-size: 16px;
+   }
+ }
 
 /*
 	we want less colorfull links at some places
@@ -98,6 +111,7 @@ $base-font-family: "Vollkorn";
 		margin-left: 0.3rem;
 	}
 }
+
 /* copyright notice */
 .copyright {
   font-size: 80%;
