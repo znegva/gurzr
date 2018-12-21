@@ -37,10 +37,16 @@
           {{ record.image|thumbnail('leadimage_500w') }} 500w,
           {{ record.image|thumbnail('leadimage_840w') }} 840w">
     {% endif %}
+
     {% if record.body %}
-      {{ record.body }}
+      {% set maincontent = record.body %}
     {% elseif record.content %}
-      {{ record.content }}
+      {% set maincontent = record.content %}
+    {% endif %}
+    {% if "/preview/" in app.request.uri %}
+      {{ maincontent|raw }}
+    {% else %}
+      {{ maincontent }}
     {% endif %}
 
     {% if record.gpx %}
