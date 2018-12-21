@@ -4,8 +4,13 @@
 #}
 
 <div class="thumbs">
-    {% for image in record.gallery %}
+    {% if record.gallery is not iterable %}
+        {% set gallery = record.gallery|json_decode %}
+    {% else %}
+        {% set gallery = record.gallery %}
+    {% endif %}
 
+    {% for image in gallery %}
         {% set fn = image['filename'] %}
         {% if record.show_gallery_captions %}
             {% set caption = image.title %}

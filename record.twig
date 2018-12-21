@@ -44,7 +44,7 @@
       {% set maincontent = record.content %}
     {% endif %}
     {% if "/preview/" in app.request.uri %}
-      {{ maincontent|raw }}
+      {{ maincontent |raw |markdown  }}
     {% else %}
       {{ maincontent }}
     {% endif %}
