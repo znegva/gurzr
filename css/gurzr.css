@@ -2077,6 +2077,13 @@ a.text-error:visited {
     display: inline; }
 
 /* style the login-form */
+/* highlight warning */
+.warning {
+  border: 1px solid #F99;
+  background-color: #FDD;
+  color: #600;
+  padding: 4px 8px; }
+
 /* gallery thumbnails */
 .thumbs {
   display: flex;

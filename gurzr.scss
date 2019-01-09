@@ -168,6 +168,14 @@ $base-font-family: "Vollkorn";
 	}
 }
 
+/* highlight warning */
+.warning {
+	border: 1px solid #F99;
+	background-color: #FDD;
+	color: #600;
+	padding: 4px 8px;
+}
+
 
 /* gallery thumbnails */
 .thumbs {
