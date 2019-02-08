@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css?family=Vollkorn');
+@import url("https://fonts.googleapis.com/css?family=Vollkorn");
 
 // Define variables to override default ones
-$primary-color: #79c753; 	/*used for links etc. */
-$dark-color: #252525;	/*normal font color is derived from this */
+$primary-color: #79c753; /*used for links etc. */
+$dark-color: #252525; /*normal font color is derived from this */
 
 $base-font-family: "Vollkorn";
 
@@ -39,192 +39,195 @@ $base-font-family: "Vollkorn";
 /*
  * make font size a bit more mobile friendly
  */
- @media (max-width: $size-md) {
- 	html{
- 		font-size: 18px;
- 	}
- }
- @media (max-width: $size-sm) {
-   html{
-     font-size: 16px;
-   }
- }
+@media (max-width: $size-md) {
+  html {
+    font-size: 18px;
+  }
+}
+@media (max-width: $size-sm) {
+  html {
+    font-size: 16px;
+  }
+}
 
 /*
 	we want less colorfull links at some places
 */
 %sober-links {
-	a{
-		color: inherit !important;
-		text-decoration: none;
-		&:hover, &.active{
-			color: $primary-color !important;
-		}
-	}
+  a {
+    color: inherit !important;
+    text-decoration: none;
+    &:hover,
+    &.active {
+      color: $primary-color !important;
+    }
+  }
 }
 
-#header{
-	margin-top: 10%;
-	margin-bottom: 10%;
-	text-align: center;
-	a,i{
-		margin-left: 0.3rem;
-		margin-right: 0.3rem;
-	}
-	@extend %sober-links;
-	.taxonomies{
-		margin-top: 1rem;
-		a{
-			&.tags{
-				&::before{
-  				content: "#";
-				}
-			}
-			&.categories{
-				font-weight: bold;
-				&::before{
-  				content: "@";
-				}
-			}
-		}
-	}
+#header {
+  margin-top: 10%;
+  margin-bottom: 10%;
+  text-align: center;
+  a,
+  i {
+    margin-left: 0.3rem;
+    margin-right: 0.3rem;
+  }
+  @extend %sober-links;
+  .taxonomies {
+    margin-top: 1rem;
+    a {
+      &.tags {
+        &::before {
+          content: "#";
+        }
+      }
+      &.categories {
+        font-weight: bold;
+        &::before {
+          content: "@";
+        }
+      }
+    }
+  }
 }
-.navbar{
-	a{
-		margin: 0.5rem;
-	}
-	@extend %sober-links;
+.navbar {
+  a {
+    margin: 0.5rem;
+  }
+  @extend %sober-links;
 }
-.content{
-	margin-bottom: 4rem;
-	img{
-		max-width: 100%;
-	}
-	.list-item{
-		margin-bottom: 5rem;
-		i{
-			margin-left: 0.3rem;
-		}
-		@extend %sober-links;
-	}
-	small i.fa{
-		margin-left: 0.3rem;
-	}
+.content {
+  margin-bottom: 4rem;
+  img {
+    max-width: 100%;
+  }
+  .list-item {
+    margin-bottom: 5rem;
+    i {
+      margin-left: 0.3rem;
+    }
+    @extend %sober-links;
+  }
+  small i.fa {
+    margin-left: 0.3rem;
+  }
 }
 
 /* copyright notice */
 .copyright {
   font-size: 80%;
   //padding-top: 1rem;
-	dt {
-	   display: inline;
-	   float: left;
-		 margin-right: 0.3rem;
-	}
+  dt {
+    display: inline;
+    float: left;
+    margin-right: 0.3rem;
+  }
 }
 
 /* some styling for the Bold default pagination */
-.pagination{
-	margin: auto;
-	li{
-		&.active{
-			color: $primary-color !important;
-		}
-		margin-right: 1rem;
-	}
-	@extend %sober-links;
+.pagination {
+  margin: auto;
+  li {
+    &.active {
+      color: $primary-color !important;
+    }
+    margin-right: 1rem;
+  }
+  @extend %sober-links;
 }
 
 /* related records */
-.related{
-	margin-top: 5rem;
+.related {
+  margin-top: 5rem;
 }
-.latest{
-	margin-bottom: 5rem;
+.latest {
+  margin-bottom: 5rem;
 }
-.related, .latest{
-	ul{
-		margin: 0;
-	}
-	li{
-		padding-left: 0;
-		list-style: none;
-		h5{
-			display: inline;
-		}
-	}
+.related,
+.latest {
+  ul {
+    margin: 0;
+  }
+  li {
+    padding-left: 0;
+    list-style: none;
+    h5 {
+      display: inline;
+    }
+  }
 }
 
 /* style the login-form */
-.passwordprotect{
-	label{
-		@extend .form-label;
-	}
-	input{
-		@extend .form-input;
-	}
-	#form>div{
-		@extend .form-group;
-	}
+.passwordprotect {
+  label {
+    @extend .form-label;
+  }
+  input {
+    @extend .form-input;
+  }
+  #form > div {
+    @extend .form-group;
+  }
 }
 
 /* highlight warning */
 .warning {
-	border: 1px solid #F99;
-	background-color: #FDD;
-	color: #600;
-	padding: 4px 8px;
+  border: 1px solid #f99;
+  background-color: #fdd;
+  color: #600;
+  padding: 4px 8px;
 }
-
 
 /* gallery thumbnails */
 .thumbs {
-	display: flex;
-	overflow: hidden;
-	flex-wrap: wrap;
-	justify-content: space-between;
+  display: flex;
+  overflow: hidden;
+  flex-wrap: wrap;
+  justify-content: space-between;
 	align-items: center;
+	margin-right: -5px;
   a {
-  	position: relative;
-  	display: block;
-  	height: 150px;
-  	margin-right: 5px;
-  	margin-bottom: 5px;
-  	flex-grow: 1;
+    position: relative;
+    display: block;
+    height: 150px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    flex-grow: 1;
 
-  	overflow: hidden;
+    overflow: hidden;
 
     img {
-    	height: 150px;
-    	max-width: 100%;
-    	min-width: 100%;
-    	vertical-align: bottom;
-    	object-fit: cover;
+      height: 150px;
+      max-width: 100%;
+      min-width: 100%;
+      vertical-align: bottom;
+      object-fit: cover;
 
-    	-webkit-transition: all 0.25s ease;
-        -moz-transition: all 0.25s ease;
-        -o-transition: all 0.25s ease;
-        -ms-transition: all 0.25s ease;
-        transition: all 0.25s ease;
+      -webkit-transition: all 0.25s ease;
+      -moz-transition: all 0.25s ease;
+      -o-transition: all 0.25s ease;
+      -ms-transition: all 0.25s ease;
+      transition: all 0.25s ease;
 
-    	/* prevent blurry scaling */
-    	-webkit-backface-visibility: hidden;
-        -ms-transform: translateZ(0); /* IE 9 */
-        -webkit-transform: translateZ(0); /* Chrome, Safari, Opera */
-        transform: translateZ(0);
+      /* prevent blurry scaling */
+      -webkit-backface-visibility: hidden;
+      -ms-transform: translateZ(0); /* IE 9 */
+      -webkit-transform: translateZ(0); /* Chrome, Safari, Opera */
+      transform: translateZ(0);
     }
     img:hover {
-        -webkit-transform:scale(1.024); /* Safari and Chrome */
-        -moz-transform:scale(1.024); /* Firefox */
-        -ms-transform:scale(1.024); /* IE 9 */
-        -o-transform:scale(1.024); /* Opera */
-         transform:scale(1.024);
+      -webkit-transform: scale(1.024); /* Safari and Chrome */
+      -moz-transform: scale(1.024); /* Firefox */
+      -ms-transform: scale(1.024); /* IE 9 */
+      -o-transform: scale(1.024); /* Opera */
+      transform: scale(1.024);
     }
   }
   &:after {
-  	content: '';
-  	flex-grow: 999999999;
-  	min-width: 250px;
-  	height: 0;
+    content: "";
+    flex-grow: 999999999;
+    min-width: 250px;
+    height: 0;
   }
 }
