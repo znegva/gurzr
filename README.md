@@ -20,20 +20,20 @@ the [Open Street Map Project](https://www.openstreetmap.org) to present gpx-trac
 
 - [Static Demo](#static-demo)
 - [Features](#features)
-	- [Menu](#menu)
-	- [Custom Favicon](#custom-favicon)
-	- [Custom CSS](#custom-css)
-	- [Galleries](#galleries)
-	- [GPX tracks](#gpx-tracks)
-	- [Optional publishing of date and taxonomies](#optional-publishing-of-date-and-taxonomies)
-	- [Subtitle](#subtitle)
-	- [Latest posts template](#latest-posts-template)
-	- [Archive template](#archive-template)
-	- [Prevent listing](#prevent-listing)
-	- [Maintenance text](#maintenance-text)
-	- [Password Protection Extension](#password-protection-extension)
-	- [Code highlighting](#code-highlighting)
-	- [Copyright notice](#copyright-notice)
+  - [Menu](#menu)
+  - [Custom Favicon](#custom-favicon)
+  - [Custom CSS](#custom-css)
+  - [Galleries](#galleries)
+  - [GPX tracks](#gpx-tracks)
+  - [Optional publishing of date and taxonomies](#optional-publishing-of-date-and-taxonomies)
+  - [Subtitle](#subtitle)
+  - [Latest posts template](#latest-posts-template)
+  - [Archive template](#archive-template)
+  - [Prevent listing](#prevent-listing)
+  - [Maintenance text](#maintenance-text)
+  - [Password Protection Extension](#password-protection-extension)
+  - [Code highlighting](#code-highlighting)
+  - [Copyright notice](#copyright-notice)
 - [Example ContentType definition](#example-contenttype-definition)
 - [ToDo](#todo)
 - [License](#license)
@@ -96,6 +96,9 @@ gurzr supports galleries - to use them just add a field `gallery` with
 
 Captions can be shown optionally, to manage this behavior add a field
 `show_gallery_captions` with `type: checkbox` to your ContentType.
+
+If you want the first image of your gallery to be shown bigger (full width) add 
+a field `show_gallery_first_entry_big` with `type: checkbox` to your ContentType.
 
 ### GPX tracks
 
@@ -288,6 +291,11 @@ posts:
             type: checkbox
             default: false
             label: 'Show captions for gallery'
+            variant: inline
+        show_gallery_first_entry_big:
+            type: checkbox
+            default: false
+            label: 'Shall the first gallery image be shown bigger'
             variant: inline
 
         copyright:

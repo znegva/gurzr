@@ -3,13 +3,15 @@
     imagelightbox is loaded
 #}
 
-<div class="thumbs">
-    {% if record.gallery is not iterable %}
-        {% set gallery = record.gallery|json_decode %}
-    {% else %}
-        {% set gallery = record.gallery %}
-    {% endif %}
+{% if record.gallery is not iterable %}
+    {% set gallery = record.gallery|json_decode %}
+{% else %}
+    {% set gallery = record.gallery %}
+{% endif %}
 
+
+
+<div class="gallery">
     {% for image in gallery %}
         {% set fn = image['filename'] %}
         {% if record.show_gallery_captions %}
@@ -17,10 +19,27 @@
         {% else %}
             {% set caption = "" %}
         {% endif %}
-        <a href="{{ asset(image.filename, 'files') }}" title="{{ caption }}"
-        data-size="{{ imageinfo(fn).info.width }}x{{ imageinfo(fn).info.height }}">
-            <img src="{{ fn|thumbnail('gallery_250h') }}" alt="{{ caption }}">
-        </a>
+        {% if loop.first and record.show_gallery_first_entry_big %}
+            <a  href="{{ asset(fn, 'files') }}"
+                class="nothumb"
+                title="{{ caption }}"
+                data-size="{{ imageinfo(fn).info.width }}x{{ imageinfo(fn).info.height }}">
+                <img src="{{ fn|thumbnail('leadimage_840w') }}"
+                    class="img-responsivexx"
+                    srcset="{{ fn|thumbnail('leadimage_350w') }} 350w,
+                        {{ fn|thumbnail('leadimage_500w') }} 500w,
+                        {{ fn|thumbnail('leadimage_840w') }} 840w"
+                    alt="{{ caption }}">
+            </a>
+        {% else %}
+            <a  href="{{ asset(fn, 'files') }}" 
+                title="{{ caption }}"
+                class="thumb"
+                data-size="{{ imageinfo(fn).info.width }}x{{ imageinfo(fn).info.height }}">
+                <img src="{{ fn|thumbnail('gallery_250h') }}" 
+                     alt="{{ caption }}">
+            </a>
+        {% endif %}
     {% endfor %}
 </div>
 <!-- PhotoSwipe , see http://photoswipe.com/documentation/getting-started.html -->
@@ -302,5 +321,5 @@ var initPhotoSwipeFromDOM = function(gallerySelector) {
 };
 
 // execute above function
-initPhotoSwipeFromDOM('.thumbs');
+initPhotoSwipeFromDOM('.gallery');
 </script>

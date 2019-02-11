@@ -2089,14 +2089,14 @@ a.text-error:visited {
   padding: 4px 8px; }
 
 /* gallery thumbnails */
-.thumbs {
+.gallery {
   display: flex;
   overflow: hidden;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   margin-right: -5px; }
-  .thumbs a {
+  .gallery a.thumb {
     position: relative;
     display: block;
     height: 150px;
@@ -2104,8 +2104,8 @@ a.text-error:visited {
     margin-bottom: 5px;
     flex-grow: 1;
     overflow: hidden; }
-    .thumbs a img {
-      height: 150px;
+    .gallery a.thumb img {
+      height: 100%;
       max-width: 100%;
       min-width: 100%;
       vertical-align: bottom;
@@ -2122,7 +2122,7 @@ a.text-error:visited {
       -webkit-transform: translateZ(0);
       /* Chrome, Safari, Opera */
       transform: translateZ(0); }
-    .thumbs a img:hover {
+    .gallery a.thumb img:hover {
       -webkit-transform: scale(1.024);
       /* Safari and Chrome */
       -moz-transform: scale(1.024);
@@ -2132,7 +2132,10 @@ a.text-error:visited {
       -o-transform: scale(1.024);
       /* Opera */
       transform: scale(1.024); }
-  .thumbs:after {
+  .gallery a.nothumb {
+    margin-right: 5px;
+    margin-bottom: 5px; }
+  .gallery:after {
     content: "";
     flex-grow: 999999999;
     min-width: 250px;

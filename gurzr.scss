@@ -180,25 +180,25 @@ $base-font-family: "Vollkorn";
 }
 
 /* gallery thumbnails */
-.thumbs {
+.gallery {
   display: flex;
   overflow: hidden;
   flex-wrap: wrap;
   justify-content: space-between;
 	align-items: center;
-	margin-right: -5px;
-  a {
+  margin-right: -5px;
+
+  a.thumb {
     position: relative;
     display: block;
     height: 150px;
     margin-right: 5px;
     margin-bottom: 5px;
     flex-grow: 1;
-
     overflow: hidden;
 
-    img {
-      height: 150px;
+    img{     
+      height: 100%;
       max-width: 100%;
       min-width: 100%;
       vertical-align: bottom;
@@ -224,6 +224,11 @@ $base-font-family: "Vollkorn";
       transform: scale(1.024);
     }
   }
+  a.nothumb{
+    margin-right: 5px;
+    margin-bottom: 5px;
+  }
+
   &:after {
     content: "";
     flex-grow: 999999999;
@@ -231,3 +236,4 @@ $base-font-family: "Vollkorn";
     height: 0;
   }
 }
+
