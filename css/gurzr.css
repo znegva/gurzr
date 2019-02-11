@@ -2050,7 +2050,6 @@ a.text-error:visited {
 .copyright {
   font-size: 80%; }
   .copyright dt {
-    display: inline;
     float: left;
     margin-right: 0.3rem; }
 
@@ -2117,6 +2116,8 @@ a.text-error:visited {
       transition: all 0.25s ease;
       /* prevent blurry scaling */
       -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      image-rendering: crisp-edges;
       -ms-transform: translateZ(0);
       /* IE 9 */
       -webkit-transform: translateZ(0);
