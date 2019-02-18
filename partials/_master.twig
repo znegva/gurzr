@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="{{ htmllang() }}">
 
-  {{ include('_head.twig') }}
+  {{ include('partials/_head.twig') }}
 
   <body>
 
     {% block menu %}
-      {{ menu('main', '_menu.twig') }}
+      {{ menu('main', 'partials/_menu.twig') }}
     {% endblock menu %}
 
     <!--div id="header" class="container grid-md">
