@@ -14,7 +14,7 @@ the [Open Street Map Project](https://www.openstreetmap.org) to present gpx-trac
 - [PasswordProtect extension](https://github.com/bobdenotter/PasswordProtect) to enable basic protection for private pages
 
 
-![screenshot 2018-12-04 at 23 44 34](https://user-images.githubusercontent.com/7450884/49477941-b853b100-f81e-11e8-9658-4f5af81c2e4d.png)
+![screenshot 2018-12-04 at 23 44 34](images/screenshot.png)
 
 <!-- TOC depthFrom:2 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
 
@@ -92,7 +92,7 @@ to change the prefix of all tags to ♥ you could add the following to your `cus
 
 gurzr supports galleries - to use them just add a field `gallery` with
 `type: imagelist` to your ContentType.  
-[PhotoSwipe](http://photoswipe.com/) is used as lightbox for the gallery images.
+[PhotoSwipe](http://photoswipe.com/) is used as light-box for the gallery images.
 
 Captions can be shown optionally, to manage this behavior add a field
 `show_gallery_captions` with `type: checkbox` to your ContentType.
@@ -122,7 +122,7 @@ by adding `hide_publish_date: true` to your ContentTypes values in
 Typically you don't want to show the _publishdate_ for pages.
 
 Display of taxonomies can also be controlled via ContentType definition.
-If you dont want taxonomy `tags` to be shown, just add
+If you don't want taxonomy `tags` to be shown, just add
 `hidden_taxonomy: [ tags ]` to your ContentType definition.
 Hereby it is possible to use some taxonomies internally but not showing them to
 your visitors.
@@ -321,9 +321,9 @@ posts:
 
 ## ToDo
 
-- [ ] add image to readme
-- [x] provide example contenttype-definition
 - [ ] support fa-icons in menu
+- [x] add image to readme
+- [x] provide example contenttype-definition
 - [x] fix `active`-class in menu for pagination-pages of listings and search results
 
 ## License
