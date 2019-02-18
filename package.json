@@ -1,7 +1,7 @@
 {
-  "name": "gurzr",
-  "version": "0.0.1",
-  "description": "A Bolt CMS theme",
+  "name": "bolt-theme-gurzr",
+  "version": "1.0.0",
+  "description": "A single column theme for Bolt CMS",
   "dependencies": {},
   "devDependencies": {
     "spectre.css": "^0.5.3"
@@ -17,7 +17,13 @@
   "keywords": [
     "theme",
     "Bolt",
-    "CMS"
+    "CMS",
+    "single column",
+    "responsive",
+    "simple",
+    "clean",
+    "gpx",
+    "gallery"
   ],
   "author": "Martin Kausche",
   "license": "MIT",
