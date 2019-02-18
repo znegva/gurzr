@@ -2,13 +2,13 @@
   "name": "gurzr",
   "version": "0.0.1",
   "description": "A Bolt CMS theme",
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
     "spectre.css": "^0.5.3"
   },
-  "devDependencies": {},
   "scripts": {
-    "sass_watch": "sass --watch gurzr.scss:css/gurzr.css",
-    "sass_once": "sass gurzr.scss css/gurzr.css"
+    "sass_watch": "sass --watch scss/gurzr.scss:css/gurzr.css",
+    "sass_once": "sass scss/gurzr.scss css/gurzr.css"
   },
   "repository": {
     "type": "git",
