@@ -40,9 +40,9 @@
       </p>
     {% endif %}
 
-    {% if record.body %}
+    {% if record.body is defined %}
       {% set maincontent = record.body %}
-    {% elseif record.content %}
+    {% elseif record.content is defined %}
       {% set maincontent = record.content %}
     {% endif %}
     {% if "/preview/" in app.request.uri %}

@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
     <!-- title and description -->
-    {% set title = ''%}
+    {% set title = '' %}
     {% if record.title is defined %}
         {% set title = title ~ record.title|striptags %}
     {% else %}
@@ -52,12 +52,14 @@
 
     <!-- SEO -->
     {% set keywords = record.title|escape %}
-    {% for c in record.taxonomy.categories %}
-        {% set keywords = keywords ~ ', ' ~ c %}
-    {% endfor %}
-    {% for c in record.taxonomy.tags %}
-        {% set keywords = keywords ~ ', ' ~ c %}
-    {% endfor %}
+    {% if (record is defined) and (record.taxonomy is not null) %}
+        {% for c in record.taxonomy.categories %}
+            {% set keywords = keywords ~ ', ' ~ c %}
+        {% endfor %}
+        {% for c in record.taxonomy.tags %}
+            {% set keywords = keywords ~ ', ' ~ c %}
+        {% endfor %}
+    {% endif %}
     <meta name="keywords" content="{{ keywords }}">
 
     <meta property="og:site_name" content="{{ app.config.get('general/sitename') }}">
