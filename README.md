@@ -1,7 +1,5 @@
 # gurzr Theme for Bolt CMS
 
-__this project is work-in-progress atm!__
-
 gurzr is a single-column theme for the [Bolt CMS](https://bolt.cm/).  
 It's build with help of many other great projects:
 - [Spectre.css](https://picturepan2.github.io/spectre/) as a great starting point for all kinds of styling
