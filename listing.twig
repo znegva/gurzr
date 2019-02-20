@@ -80,18 +80,23 @@
                   {% set teaser =  (record.body ~ record.content)|excerpt(250, false, search|default('')) %}
                 {% endif %}
 
+                {{ teaser }}
+
+                {# 
+                  in fact we dont want to show teaser to users not logged in 
+                  (if the record itself is password protected, of course)
+                  but we are not able to call a function ONLY IF the extension is installed (and therefore the function is available/defined)
+                
                 {% if record.use_password_protection %}
-                  {# we want this record to be password protected, hide teaser if not logged in #}
-                  {# check if the extension is installed, and if user is logged in #}
-                  {% if app.extensions.get('Bobdenotter/PasswordProtect') is not null and passwordprotect_username() %}
-                    {{ teaser }}
-                  {% else %}
-                    {# NOT LOGGED IN, NO TEASER!! #}
+                  {% if app.extensions.get('Bobdenotter/PasswordProtect') is not null %}
+                    {% if passwordprotect_username() %}
+                      {{ teaser }}
+                    {% endif %}
                   {% endif %}
                 {% else %}
-                  {# no protection, just show the teaser #}
                   {{ teaser }}
                 {% endif %}
+                #}
               </a>
             </p>
 

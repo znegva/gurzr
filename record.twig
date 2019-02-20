@@ -3,7 +3,7 @@
 {% block content %}
   {# the first thing is to check if this record shall be password protected #}
   {% if record.use_password_protection %}
-    {% if app.extensions.get('Bobdenotter/PasswordProtect') is not null %}
+    {% if not app.extensions.get('Bobdenotter/PasswordProtect') is null %}
       {{ include(template_from_string("{{ passwordprotect() }}")) }}
     {% else %}
       <p class="warning">
