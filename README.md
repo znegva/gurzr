@@ -44,6 +44,8 @@ A static demo of the theme can be found [here](https://znegva.github.io/bolt_the
 
 ## Features
 
+Please make sure `strict_variables: false` is set/uncommented in your `config.yml` if you get Twig Exceptions.
+
 ### Menu
 
 The `main` menu is used for the sidebar, you can adjust it in the
