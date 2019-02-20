@@ -3,8 +3,24 @@
   </section>
 
   <section class="navbar-section">
+    {# check if the record has its own menu entry-item #}
+    {% set recordHasOwnItem = false %}
     {% for item in menu %}
-      <a  class="{% if ( item|current ) or ( (item.link ~ "?page_") in app.request.uri ) or ( (item.link ~ "?search=") in app.request.uri ) or ( record.contenttype.slug in item.link ) %} active{% endif %}"
+      {% set recordHasOwnItem = recordHasOwnItem or item|current %}
+    {% endfor %}
+
+    {# build the menu items #}
+    {% for item in menu %}
+      {% set isActive = (item|current) %}
+      {# dont let pager-pages break it #}
+      {% set isActive = isActive or ( (item.link ~ "?page_") in app.request.uri ) %}
+      {# same for search-pager-pages #}
+      {% set isActive = isActive or ( (item.link ~ "?search=") in app.request.uri ) %}
+      {# if the records contenttype has its own menu entry this menu entry should be active,
+         but only if the record itself does NOT have its own menu entry! #}
+      {% set isActive = isActive or ( record.contenttype.slug in item.link and not recordHasOwnItem ) %}
+      
+      <a  class="{% if isActive %}active{% endif %}"
           href="{{ item.link }}">
         {{ item.label }}
       </a>
