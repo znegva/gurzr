@@ -13,6 +13,9 @@
   "require": {
     "bolt/bolt": "^3.4"
   },
+  "suggest": {
+    "bobdenotter/passwordprotect": "Add password protection to your pages."
+  },
   "license": "MIT",
   "authors": [
     {
