@@ -8,7 +8,7 @@
 
     <!-- title and description -->
     {% set title = '' %}
-    {% if record.title is defined %}
+    {% if record.title %}
         {% set title = title ~ record.title|striptags %}
     {% else %}
         {% if taxonomytype is defined %}
@@ -24,11 +24,11 @@
     {% endif %}
     {% set title = title ~ app.config.get('general/sitename') %}
 
-    {% if record.teaser is defined %}
+    {% if record.teaser %}
         {% set description = record.teaser | striptags %}
-    {% elseif record.content is defined %}
+    {% elseif record.content %}
         {% set description = record.content|excerpt(200) %}
-    {% elseif record.body is defined %}
+    {% elseif record.body %}
         {% set description = record.body|excerpt(200) %}
     {% elseif app.config.get('general/payoff') %}
         {% set description = app.config.get('general/payoff')|striptags %}
